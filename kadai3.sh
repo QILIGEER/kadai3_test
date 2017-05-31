@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/sh
 
 #input
 #echo 'please num a and b:';
