@@ -1,12 +1,21 @@
 #!/bin/sh
+# arguments check
+if [ -z $1 -o -z $2 ]; then
+  echo "kadai3.sh に2つの自然数入力してください" 1>&2
+exit 1
+fi
 
-#input
-#echo 'please num a and b:';
-#read a b;
 a=$1
 b=$2
 
 # preparation
+if [$a -lt $b]
+then
+  c=$a
+  a=$b
+  b=$c
+fi
+
 c=$((a%b))
 
 # calculation
