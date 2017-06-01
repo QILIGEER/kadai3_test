@@ -1,6 +1,6 @@
 #!/bin/sh
 
-￼tmp=/tmp/$$
+tmp=/tmp/$$
 
 ERROR_EXIT () {
     echo "$1" >&2
