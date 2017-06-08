@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 
 ## arguments check
 # input number check
@@ -6,12 +6,28 @@ if [ $# -lt 2 ]; then
   echo "kadai3.sh に2つの自然数入力してください" 1>&2
   exit 1
 fi
+
 a=$1
 b=$2
 
-# preparation
+# 0 check
+if [ $1 -eq 0 -o $2 -eq 0 ]; then
+  echo "数字0ダメです！kadai3.sh に2つの自然数入力してください" 1>&2
+  exit 1
+fi
 
-c=$((a%b))
+
+# # inputs are not number
+if [[ ! $1 =~ ^[0-9]+$ || ! $2 =~ ^[0-9]+$ ]]; then
+  echo "kadai3.sh に2つの自然数入力してください" 1>&2
+  exit 1
+fi
+
+
+
+
+# preparation
+ c=$((a%b))
 
 # calculation
 while [ ${c} -ne 0 ]
